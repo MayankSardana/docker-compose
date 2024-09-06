@@ -1,0 +1,8 @@
+FROM  openjdk:8
+
+EXPOSE 8080
+
+ADD target/docker-compose.jar docker-compose.jar
+
+ENTRYPOINT ["java" , "-jar" , "/docker-compose.jar"]
+
