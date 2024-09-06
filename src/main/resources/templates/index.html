@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Student Details</title>
+</head>
+<body>
+<h1>Enter Student Details ::</h1>
+
+<form th:action="@{/save}" th:object="${student}" method="post">
+
+        <label>UID:</label>
+        <input type="text" th:field="*{id}" /><br/>
+ 
+        <label>NAME:</label>
+        <input type="text" th:field="*{name}" /><br/>
+ 
+        <label>COMPANY:</label>
+        <input type="text" th:field="*{company}" /><br/>
+ 
+        <button type="submit">Submit</button>    
+</form>
+
+</body>
+</html>
